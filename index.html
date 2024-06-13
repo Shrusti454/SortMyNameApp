@@ -1,0 +1,89 @@
+<html>
+<head>
+  <title> sort my name app by shrusti tambe</title>
+  <style>
+      body {
+  background-color: #e0f7fa; /* Light blue background */
+  font-family: Arial, sans-serif;
+}
+
+.converter-container {
+  padding: 20px;
+}
+
+h1 {
+  color: #00695c; /* Dark teal color */
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.convert-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #00796b; /* Dark teal color for button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.convert-button:hover {
+  background-color: #004d40; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #004d40; /* Matching color for result text */
+}
+  </style>
+</head>
+<body>
+<center>
+      <h1> Sort My Name App </h2>
+      <form onsubmit="mysort()">
+      <input type="text" placeholder="enter your name" id="name"/>
+      </br></br>
+      <input type="submit"/>
+      <h2 id="msg" onCheck="btn"/>
+      </form>
+
+    <script>
+          function mysort()
+          {
+           event.preventDefault();
+           let name=document.getElementById("name");
+           let msg=document.getElementById("msg");
+
+           if(name.value.trim()=="")
+            {
+              alert=("name cannot be empty");
+              msg.innerHTML;
+              name.focus();
+              return;
+             }
+            let n=name.value;
+            let d1=n.split("");
+            d1.sort()
+            let nn=d1.join("");
+            let nnn=n.split("").sort().join("");
+            msg.innerHTML="sorted name " +nn+ " " + nnn;          
+            }
+    </script>
+    </center>
+    </body>
+    </html>
+
+            
+          
+
+
+
+
